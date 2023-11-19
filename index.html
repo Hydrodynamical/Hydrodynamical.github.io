@@ -45,6 +45,27 @@
         a:active {
             color: #8DA656; /* Active link color */
         }
+        .centered-image {
+        display: block; /* Allows margin auto to work */
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px; /* Fixed width */
+        height: 150px; /* Fixed height */
+        object-fit: cover; /* This ensures the image covers the fixed size without stretching. It might crop the image if the aspect ratio is different */
+        }
+        .left-aligned-image {
+            float: left; /* Aligns the image to the left */
+            margin-right: 10px; /* Adds some space between the image and any following content */
+            /* Optional: specify a fixed size */
+            width: 200px; /* Example width */
+            height: auto; /* Height auto will maintain the aspect ratio */
+        }
+        .standard-image {
+            /* Optional: specify a fixed size */
+            width: 400px; /* Example width */
+            height: auto; /* Height auto will maintain the aspect ratio */
+        }
+
     </style>
 </head>
 <body>
@@ -56,8 +77,9 @@
         <a href="ConferencePictures.html">Conference Pictures</a>
     </div>
 
-    <h1>Welcome to My Homepage</h1>
-    <p>This is a paragraph.</p>
+    <h1>Joseph K. Miller</h1>
+    <img src="files/Oberwolfach2022.jpg" alt="Profile Pictures" class="standard-image">
+    <p>This is a paragraph describing my research.</p>
 
     <h2><a href="#section1">Section 1</a></h2>
     <p>Details about Section 1...</p>
