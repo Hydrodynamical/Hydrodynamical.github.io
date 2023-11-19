@@ -45,6 +45,28 @@
             a:active {
                 color: #8DA656; /* Active link color */
             }
+            /* list styles */
+            ul {
+            list-style-type: decimal;
+            padding-left: 30px;
+            }
+            ul li {
+            margin-bottom: 10px; /* Adjusts vertical space between list items */
+            }
+            ul li::before {
+                color: #1A2622;
+                display: inline-block;
+                width: 1em;
+                margin-left: -1em;
+            }
+            .italic {
+            font-style: italic;
+            }
+            .bold {
+            font-weight: bold;
+            }
+
+
         </style>
     </head>
 <body>
@@ -53,22 +75,41 @@
         <a href="index.html">Home</a>
         <a href="CurriculumVitae.html">Curriculum Vitae</a>
         <a href="Publications.html">Publications</a>
-        <a href="ConferencePictures.html">Conference Pictures</a>
+        <a href="Teaching.html">Teaching</a>
+        <a href="Conferences.html">Conferences</a>
+        <a href="Contact.html">Contact</a>
     </div>
 
-    <h1>Publications</h1>
+
+    <h1>Publications and Preprints</h1>
     <p></p>
-
-    <h2><a href="#section1">Section 1</a></h2>
-    <p>Details about Section 1...</p>
-
-    <h2><a href="#section2">Section 2</a></h2>
-    <p>Details about Section 2...</p>
-
-    <h2><a href="#section3">Section 3</a></h2>
-    <p>Details about Section 3...</p>
-
-    <!-- More sections can be added here -->
+    <input type="text" id="searchInput" placeholder="Search...">
+    <ul id="searchList">
+        <!-- ADD NEW PUBLICATIONS HERE --> 
+        <li>I. Ampatzoglou, <span class="bold">J. K. Miller</span>, N. Pavlovi&cacute;, M. Taskovi&cacute;. <span class="italic"> On the Uniqueness and Global Existence of the Boltzmann Hierarchy.</span> In Preparation. (2023). </li>
+        <li>E. C&aacute;rdenas, <span class="bold">J. K. Miller</span>, N. Pavlovi&cacute;. <span class="italic">On the Effective Dynamics of Bose-Fermi Mixtures</span>. In Submission, (2023). <a href="https://arxiv.org/abs/2309.04638">ArXiv Link</a>.</li>
+        <li><span class="bold">J. K. Miller</span>, A. R. Nahmod, N. Pavlovi&cacute;, M. Rosenzweig, G. Staffilani. <span class="italic">A Rigorous Derivation of the Hamiltonian Structure for the Vlasov Equation.</span>  Forum of Mathematics,
+            Sigma, 11, e77. (2023). <a href="https://www.cambridge.org/core/journals/forum-of-mathematics-sigma/article/rigorous-derivation-of-the-hamiltonian-structure-for-the-vlasov-equation/F8603D4224762764E7C83B4042457750">Article Link</a>. <a href="https://arxiv.org/abs/2206.07589">ArXiv Link</a></li>
+        <li>I. Ampatzoglou, <span class="bold"> J. K. Miller</span>, N. Pavlovi&cacute;. <span class="italic">A Rigorous Derivation of a Boltzmann System for a Mixture of Hard-Sphere Gases</span>. SIMA, Vol. 54, Iss. 2. (2022). <a href="https://doi.org/10.1137/21M1424779">Article Link</a>. <a href="https://arxiv.org/abs/2104.14480">ArXiv Link</a>.</li>
+        <li>J. Lyons, <span class="bold">J. K. Miller</span>. <span class="italic">The Derivative of a Solution to a Second Order Parameter Dependent Boundary Value Problem with a Non-Local Integral Boundary Condition.</span> Journal of Mathematical and Statistical Science, Vol. 2015, Iss. 2. (2015). <a href="https://nsuworks.nova.edu/math_facarticles/118/">Article Link</a></li>
+    </ul>
     
+
+    <!-- Scripts -->
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function() {
+            var input = this.value.toLowerCase();
+            var listItems = document.getElementById('searchList').getElementsByTagName('li');
+    
+            for (var i = 0; i < listItems.length; i++) {
+                var item = listItems[i].textContent || listItems[i].innerText;
+                if (item.toLowerCase().indexOf(input) > -1) {
+                    listItems[i].style.display = "";
+                } else {
+                    listItems[i].style.display = "none";
+                }
+            }
+        });
+    </script>
 </body>
 </html>
