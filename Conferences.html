@@ -2,6 +2,7 @@
 <html lang = "en">
 <html>
     <head>
+        
         <title>Joseph K. Miller</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
@@ -46,6 +47,32 @@
             a:active {
                 color: #8DA656; /* Active link color */
             }
+            /* list styles */
+            ul {
+            list-style-type: square;
+            padding-left: 30px;
+            }
+            ul li {
+            margin-bottom: 10px; /* Adjusts vertical space between list items */
+            }
+            ul li::before {
+                color: #1A2622;
+                display: inline-block;
+                width: 1em;
+                margin-left: -1em;
+            }
+            .italic {
+            font-style: italic;
+            }
+            .bold {
+            font-weight: bold;
+            }
+            .abstract {
+            display: none;
+            margin-top: 10px;
+            }
+            
+
         </style>
     </head>
 <body>
@@ -57,13 +84,138 @@
         <a href="Teaching.html">Teaching</a>
     </div>
 
-    This page is under construction. Migrating from <a href="https://joekmiller.wordpress.com/">my old webpage</a>.
-    <h1>2022</h1>
-    <img src="files/birs2022-1.jpg" alt="BIRS, 2022" >
-    <p>
-        BIRS: Recent Progress in Kinetic and Integro-Differential Equations. November, 2022  
-    </p>
 
+    <h1>Conferences</h1>
+    <p>I like to travel to conferences and meet new people to discuss math with. If you see me at one, feel free say hi! </p>
+    <p>Double click "Info" below to bring up more information about the conference.</p>
+
+    <input type="text" id="searchInput" placeholder="Search...">
     
+    <ul id="searchList">
+        <!-- BASE OBJECT FOR COPY PASTE
+
+        <li>Conference Location. City, State. <span class = "italic">Beginning Date - End Date.</span> <a href="javascript:void(0);" onclick="toggleAbstract('id')">Info</a>
+            <div id="id" class="abstract">
+                <h4><a href="link">Conference Name</a></h4>
+                <p>These are notes for the conference. </p>
+            </div>
+        </li>
+        
+        -->
+        <h2>2023</h2> 
+        <li>Monash University. Melbourne, Australia. <span class="italic">December 10th - December 15th.</span> <a href="javascript:void(0);" onclick="toggleAbstract('melbourne')">Info</a>
+            <div id="melbourne" class="abstract">
+                <h4><a href="https://sites.google.com/view/dispersive-pde">Nonlinear dispersive and wave equations; Recent developments and future directions</a></h4>
+                <p>A conference in honor of Carlos Kenig. I'll be giving a short contributing talk there on Bose-Fermi mixtures.</p>
+            </div>
+        </li>
+        <li>Simons Foundation. New York, NY. <span class="italic">November 30th - December 1st.</span> <a href="javascript:void(0);" onclick="toggleAbstract('simons2023')">Info</a>
+            <p id="simons2023" class="abstract">This where to put information about the conference.</p>
+        </li>
+        <li>Kansas State University. Manhattan, KS. <span class="italic">November 3rd - November 4th.</span><a href="javascript:void(0);" onclick="toggleAbstract('kansas')">Info</a>
+            <p id="kansas" class="abstract">This where to put information about the conference.</p>
+        </li>
+        <li>MIT. Boston, MA. <span class = "italic">July 24th - July 28th.</span> <a href="javascript:void(0);" onclick="toggleAbstract('mit23')">Info</a>
+            <p id="mit23" class="abstract">This where to put information about the conference.</p>
+        </li>
+        <li>Imperial College, London. London, United Kingdom. <span class = "italic">July 10th - July 14th.</span> <a href="javascript:void(0);" onclick="toggleAbstract('imperial')">Info</a>
+            <p id="imperial" class="abstract">This where to put information about the conference.</p>
+        </li>
+
+        <h2>2022</h2>
+        <li>Simons Foundation. New York, NY. <span class = "italic">December 1st - December 2nd.</span> <a href="javascript:void(0);" onclick="toggleAbstract('simons2022')">Info</a>
+            <p id="simons2022" class="abstract">This where to put information about the conference.</p>
+        </li>
+        <li>MIT. Boston, MA. <span class = "italic">November 19th.</span> <a href="javascript:void(0);" onclick="toggleAbstract('mit22')">Info</a>
+            <p id="mit22" class="abstract">This where to put information about the conference.</p>
+        </li>
+        <li>Banff International Research Station. Banff, Canada. <span class = "italic">November 6th - November 11th.</span> <a href="javascript:void(0);" onclick="toggleAbstract('birs22')">Info</a>
+            <p id="birs22" class="abstract">This where to put information about the conference.</p>
+        </li>
+        <li>Institute for Computational and Experimental Research in Mathematics. Providence, RI. <span class = "italic">October 17th - October 21st.</span> <a href="javascript:void(0);" onclick="toggleAbstract('icerm22')">Info</a>
+            <p id="icerm22" class="abstract">This where to put information about the conference.</p>
+        </li>
+        <li>Torino, Italy. <span class = "italic">July 17th - July 21st.</span> <a href="javascript:void(0);" onclick="toggleAbstract('torino')">Info</a>
+            <p id="torino" class="abstract">This where to put information about the conference.</p>
+        </li>
+        <li>Pesaro, Italy. <span class = "italic">June 12th - June 18th.</span> <a href="javascript:void(0);" onclick="toggleAbstract('pesaro')">Info</a>
+            <p id="pesaro" class="abstract">This where to put information about the conference.</p>
+        </li>
+        <li>Oberwolfach Research Institute for Mathematics. Oberwolfach, Germany. <span class = "italic">May 22nd - May 28th.</span> <a href="javascript:void(0);" onclick="toggleAbstract('mfo22')">Info</a>
+            <p id="mfo22" class="abstract">This where to put information about the conference.</p>
+        </li>
+
+        <h2>2021</h2>
+        <li>Simons Foundation. New York, NY. <span class = "italic">December 2nd - December 3rd.</span> <a href="javascript:void(0);" onclick="toggleAbstract('simons21')">Info</a>
+            <p id="id" class="abstract">This where to put information about the conference.</p>
+        </li>
+        <li>Institute for Computational and Experimental Research in Mathematics. Providence, RI. <span class = "italic">October 18th - December 10th.</span> <a href="javascript:void(0);" onclick="toggleAbstract('icerm21')">Info</a>
+            <p id="icerm21" class="abstract">This where to put information about the conference.</p>
+        </li>
+        <li>Institut d'Etudes Scientifiques de Carg&egrave;se. Corsica, France. <span class = "italic">August 13th - August 21st.</span> <a href="javascript:void(0);" onclick="toggleAbstract('cargese')">Info</a>
+            <p id="cargese" class="abstract">This where to put information about the conference.</p>
+        </li>
+        <li>Mathematical Sciences Research Institute. Berkeley, CA. <span class = "italic">May 24th - June 18th.</span> <a href="javascript:void(0);" onclick="toggleAbstract('msri')">Info</a>
+            <p id="msri" class="abstract">This where to put information about the conference.</p>
+        </li>
+        <li>University of Texas - Austin. Austin, TX. <span class = "italic">May 17th - May 21st.</span> <a href="javascript:void(0);" onclick="toggleAbstract('ut21')">Info</a>
+            <p id="ut21" class="abstract">This where to put information about the conference.</p>
+        </li>
+        <li>University of Texas - Austin. Austin, TX. <span class = "italic">April 9th - April 11th.</span> <a href="javascript:void(0);" onclick="toggleAbstract('tamp21')">Info</a>
+            <p id="tamp21" class="abstract">This where to put information about the conference.</p>
+        </li>
+        <li>University of Ohio and University of Kentucky. <span class = "italic">March 20th - March 21st.</span> <a href="javascript:void(0);" onclick="toggleAbstract('oram')">Info</a>
+            <p id="oram" class="abstract">This where to put information about the conference.</p>
+        </li>
+
+        <h2>2020</h2>
+        <li>University of Pennsylvania. <span class = "italic">October 1st - October 2nd.</span> <a href="javascript:void(0);" onclick="toggleAbstract('penn20')">Info</a>
+            <p id="id" class="abstract">This where to put information about the conference.</p>
+        </li>
+        
+        <h2>2019</h2>
+        <li>&Eacute;cole Normale Sup&eacute;rieure de Lyon. Lyon, France. <span class = "italic">September 30th - October 4th.</span> <a href="javascript:void(0);" onclick="toggleAbstract('ens19')">Info</a>
+            <p id="ens19" class="abstract">This where to put information about the conference.</p>
+        </li>
+        <li>University of Texas - Austin. Austin, TX. <span class = "italic">August 5th - August 9th.</span> <a href="javascript:void(0);" onclick="toggleAbstract('data19')">Info</a>
+            <p id="data19" class="abstract">This where to put information about the conference.</p>
+        </li>
+        <li>Universitat de Barcelona. Barcelona, Spain. <span class = "italic">June 25th - June 28th.</span> <a href="javascript:void(0);" onclick="toggleAbstract('barc19')">Info</a>
+            <p id="barc19" class="abstract">This where to put information about the conference.</p>
+        </li>
+        <li>K&aacute;cov, Czech Republic. <span class = "italic">May 26th - May 31st.</span> <a href="javascript:void(0);" onclick="toggleAbstract('kacov')">Info</a>
+            <p id="kacov" class="abstract">This where to put information about the conference.</p>
+        </li>
+        
+
+
+        
+    </ul>
+    
+
+    <!-- Scripts -->
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function() {
+            var input = this.value.toLowerCase();
+            var listItems = document.getElementById('searchList').getElementsByTagName('li');
+    
+            for (var i = 0; i < listItems.length; i++) {
+                var item = listItems[i].textContent || listItems[i].innerText;
+                if (item.toLowerCase().indexOf(input) > -1) {
+                    listItems[i].style.display = "";
+                } else {
+                    listItems[i].style.display = "none";
+                }
+            }
+        });
+        function toggleAbstract(id) {
+            var abstract = document.getElementById(id);
+            if (abstract.style.display === 'none') {
+                abstract.style.display = 'block';
+            } else {
+                abstract.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
