@@ -67,6 +67,15 @@
             .bold {
             font-weight: bold;
             }
+            .abstract {
+            display: none;
+            margin-top: 10px;
+            border: 2px solid #647345; /* Change the border color and width */
+            padding: 15px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+            border-radius: 5px; /* Optional: rounded corners */
+            background-color: #F2F2F2; /* Light background for the box */
+            }
 
 
         </style>
@@ -85,13 +94,37 @@
     <p></p>
     <input type="text" id="searchInput" placeholder="Search...">
     <ul id="searchList">
-        <!-- ADD NEW PUBLICATIONS HERE --> 
-        <li>I. Ampatzoglou, <span class="bold">J. K. Miller</span>, N. Pavlovi&cacute;, M. Taskovi&cacute;. <span class="italic"> On the Uniqueness and Global Existence of the Boltzmann Hierarchy.</span> In Preparation. (2023). </li>
-        <li>E. C&aacute;rdenas, <span class="bold">J. K. Miller</span>, N. Pavlovi&cacute;. <span class="italic">On the Effective Dynamics of Bose-Fermi Mixtures</span>. In Submission, (2023). <a href="https://arxiv.org/abs/2309.04638">ArXiv Link</a>.</li>
-        <li><span class="bold">J. K. Miller</span>, A. R. Nahmod, N. Pavlovi&cacute;, M. Rosenzweig, G. Staffilani. <span class="italic">A Rigorous Derivation of the Hamiltonian Structure for the Vlasov Equation.</span>  Forum of Mathematics,
-            Sigma, 11, e77. (2023). <a href="https://www.cambridge.org/core/journals/forum-of-mathematics-sigma/article/rigorous-derivation-of-the-hamiltonian-structure-for-the-vlasov-equation/F8603D4224762764E7C83B4042457750">Article Link</a>. <a href="https://arxiv.org/abs/2206.07589">ArXiv Link</a></li>
-        <li>I. Ampatzoglou, <span class="bold"> J. K. Miller</span>, N. Pavlovi&cacute;. <span class="italic">A Rigorous Derivation of a Boltzmann System for a Mixture of Hard-Sphere Gases</span>. SIMA, Vol. 54, Iss. 2. (2022). <a href="https://doi.org/10.1137/21M1424779">Article Link</a>. <a href="https://arxiv.org/abs/2104.14480">ArXiv Link</a>.</li>
-        <li>J. Lyons, <span class="bold">J. K. Miller</span>. <span class="italic">The Derivative of a Solution to a Second Order Parameter Dependent Boundary Value Problem with a Non-Local Integral Boundary Condition.</span> Journal of Mathematical and Statistical Science, Vol. 2015, Iss. 2. (2015). <a href="https://nsuworks.nova.edu/math_facarticles/118/">Article Link</a></li>
+        <!--
+            
+        <li>Authors. <span class = "italic">Title</span> <a href="javascript:void(0);" onclick="toggleAbstract('id')">Abstract</a>
+            <div id="id" class="abstract">
+                Abstract contents.
+            </div>
+        </li>
+
+        --> 
+        <li>I. Ampatzoglou, J. K. Miller, N. Pavlovi&cacute;, M. Taskovi&cacute;. <span class="italic"> On the Uniqueness and Global Existence of the Boltzmann Hierarchy.</span> In Preparation. (2023). </li>
+        <li>E. C&aacute;rdenas, J. K. Miller, N. Pavlovi&cacute;. <span class="italic">On the Effective Dynamics of Bose-Fermi Mixtures</span>. In Submission, (2023). <a href="javascript:void(0);" onclick="toggleAbstract('CMP23')">Abstract</a>. <a href="https://arxiv.org/abs/2309.04638">ArXiv Link</a>.
+            <div id = "CMP23" class = "abstract">
+                In this work, we describe the dynamics of a Bose-Einstein condensate interacting with a degenerate Fermi gas, at zero temperature. First, we analyze the mean-field approximation of the many-body Schrödinger dynamics and prove emergence of a coupled Hartree-type system of equations. We obtain rigorous error control that yields a non-trivial scaling window in which the approximation is meaningful. Second, starting from this Hartree system, we identify a novel scaling regime in which the fermion distribution behaves semi-clasically, but the boson field remains quantum-mechanical; this is one of the main contributions of the present article. In this regime, the bosons are much lighter and more numerous than the fermions. We then prove convergence to a coupled Vlasov-Hartee system of equations with an explicit convergence rate.
+            </div>
+        </li>
+        <li>J. K. Miller, A. R. Nahmod, N. Pavlovi&cacute;, M. Rosenzweig, G. Staffilani. <span class="italic">A Rigorous Derivation of the Hamiltonian Structure for the Vlasov Equation.</span>  Forum of Mathematics,
+            Sigma, 11, e77. (2023). <a href="javascript:void(0);" onclick="toggleAbstract('MNPRG23')">Abstract</a>. <a href="https://www.cambridge.org/core/journals/forum-of-mathematics-sigma/article/rigorous-derivation-of-the-hamiltonian-structure-for-the-vlasov-equation/F8603D4224762764E7C83B4042457750">Article Link</a>. <a href="https://arxiv.org/abs/2206.07589">ArXiv Link</a>
+            <div id = "MNPRG23" class = "abstract">
+                We consider the Vlasov equation in any spatial dimension, which has long been known to be an infinite-dimensional Hamiltonian system whose bracket structure is of Lie-Poisson type. In parallel, it is classical that the Vlasov equation is a mean-field limit for a pairwise interacting Newtonian system. Motivated by this knowledge, we provide a rigorous derivation of the Hamiltonian structure of the Vlasov equation, both the Hamiltonian functional and Poisson bracket, directly from the many-body problem. One may view this work as a classical counterpart to <a href="https://arxiv.org/abs/1908.03847">arXiv:1908.03847</a>, which provided a rigorous derivation of the Hamiltonian structure of the cubic nonlinear Schrödinger equation from the many-body problem for interacting bosons in a certain infinite particle number limit, the first result of its kind. In particular, our work settles a question of Marsden, Morrison, and Weinstein on providing a "statistical basis" for the bracket structure of the Vlasov equation.
+            </div>
+        </li>
+        <li>I. Ampatzoglou, J. K. Miller, N. Pavlovi&cacute;. <span class="italic">A Rigorous Derivation of a Boltzmann System for a Mixture of Hard-Sphere Gases</span>. SIMA, Vol. 54, Iss. 2. (2022). <a href="javascript:void(0);" onclick="toggleAbstract('AMP22')">Abstract</a>. <a href="https://doi.org/10.1137/21M1424779">Article Link</a>. <a href="https://arxiv.org/abs/2104.14480">ArXiv Link</a>.
+            <div id = "AMP22" class="abstract">
+                In this paper, we rigorously derive a Boltzmann equation for mixtures from the many body dynamics of two types of hard sphere gases. We prove that the microscopic dynamics of two gases with different masses and diameters is well defined, and introduce the concept of a two parameter BBGKY hierarchy to handle the non-symmetric interaction of these gases. As a corollary of the derivation, we prove Boltzmann's propagation of chaos assumption for the case of a mixtures of gases.
+            </div>
+        </li>
+        <li>J. Lyons, J. K. Miller. <span class="italic">The Derivative of a Solution to a Second Order Parameter Dependent Boundary Value Problem with a Non-Local Integral Boundary Condition.</span> Journal of Mathematical and Statistical Science, Vol. 2015, Iss. 2. (2015). <a href="javascript:void(0);" onclick="toggleAbstract('LM15')">Abstract</a>. <a href="https://nsuworks.nova.edu/math_facarticles/118/">Article Link</a>
+            <div id = "LM15" class="abstract">
+                We discuss derivatives of the solution of the second order parameter dependent boundary value problem with an integral boundary condition y”=f(x,y,y′,λ),y(x1)=y1,y(x2)+∫dcry(x)dx=y2 y”=f(x,y,y′,λ),y(x1)=y1,y(x2)+∫cdry(x)dx=y2 and its relationship to a second order nonhomogeneous differential equation which corresponds to the traditional variational equation. Specifically, we show that given a solution y(x) of the boundary value problem, the derivative of the solution with respect to the parameter λ is itself a solution to the aforementioned nonhomogeneous equation with interesting boundary conditions.
+            </div>
+        </li>
     </ul>
     
 
@@ -110,6 +143,14 @@
                 }
             }
         });
+        function toggleAbstract(id) {
+            var abstract = document.getElementById(id);
+            if (abstract.style.display === 'none') {
+                abstract.style.display = 'block';
+            } else {
+                abstract.style.display = 'none';
+            }
+        }
     </script>
 </body>
 </html>
