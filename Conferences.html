@@ -70,8 +70,12 @@
             .abstract {
             display: none;
             margin-top: 10px;
+            border: 2px solid #647345; /* Change the border color and width */
+            padding: 15px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+            border-radius: 5px; /* Optional: rounded corners */
+            background-color: #F2F2F2; /* Light background for the box */
             }
-            
 
         </style>
     </head>
@@ -96,8 +100,8 @@
 
         <li>Conference Location. City, State. <span class = "italic">Beginning Date - End Date.</span> <a href="javascript:void(0);" onclick="toggleAbstract('id')">Info</a>
             <div id="id" class="abstract">
-                <h4><a href="link">Conference Name</a></h4>
-                <p>These are notes for the conference. </p>
+                <a href="link">Conference Name</a>
+                <p>These are notes for the conference.</p>
             </div>
         </li>
         
@@ -105,7 +109,7 @@
         <h2>2023</h2> 
         <li>Monash University. Melbourne, Australia. <span class="italic">December 10th - December 15th.</span> <a href="javascript:void(0);" onclick="toggleAbstract('melbourne')">Info</a>
             <div id="melbourne" class="abstract">
-                <h4><a href="https://sites.google.com/view/dispersive-pde">Nonlinear dispersive and wave equations; Recent developments and future directions</a></h4>
+                <a href="https://sites.google.com/view/dispersive-pde">Nonlinear dispersive and wave equations; Recent developments and future directions</a>
                 <p>A conference in honor of Carlos Kenig. I'll be giving a short contributing talk there on Bose-Fermi mixtures.</p>
             </div>
         </li>
