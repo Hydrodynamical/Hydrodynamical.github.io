@@ -70,6 +70,11 @@
             .abstract {
             display: none;
             margin-top: 10px;
+            border: 2px solid #647345; /* Change the border color and width */
+            padding: 15px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+            border-radius: 5px; /* Optional: rounded corners */
+            background-color: #F2F2F2; /* Light background for the box */
             }
 
         </style>
@@ -85,20 +90,35 @@
 
 
     <h1>Research</h1>
-    <p>This page is under construction. Migrating from <a href="https://joekmiller.wordpress.com/">my old webpage</a>.</p>
+        <p>My research focuses on mathematical structures arising from both classical and quantum statistical physics. 
+        These structures arise from fundamental questions in physics, primarily asking how to
+        can approximate high or infinite dimensional systems of equations by lower dimensional effective non-linear equations. 
+        I plan to continue studying these types of problems in mathematical physics, and additionally investigate how to
+        apply these methods to problems in large neural networks. This approach to studying machine learning has
+        the potential to utilize the high dimensionality of these networks and understand how they converge at the
+        level of rigor of mathematical physics.
+        </p>
+
+        <p></p>
 
 
+    <h1>Bibliography</h1>
     <input type="text" id="searchInput" placeholder="Search...">
     
     <ul id="searchList">
         <!-- ADD REFERENCES HERE --> 
         <!-- BASE OBJECT
 
-        <li>Paper Title. <a href="javascript:void(0);" onclick="toggleAbstract('id')">Abstract</a>
-            <p id="id" class="abstract">This is the abstract of the paper.</p>
+        <li>Authors. <span class = "italic">Title</span> <a href="javascript:void(0);" onclick="toggleAbstract('id')">Abstract</a>. <a href="link">ArXiv Link</a>.
+            <div id="id" class="abstract">
+                Abstract contents.
+            </div>
         </li>
         
         -->
+        <li>Paper Title. <a href="javascript:void(0);" onclick="toggleAbstract('id')">Abstract</a>
+            <p id="id" class="abstract">This is the abstract of the paper.</p>
+        </li>
         <li>Paper Title 1. <a href="javascript:void(0);" onclick="toggleAbstract('id1')">Abstract</a>
             <p id="id1" class="abstract">This is the abstract of the paper alpha.</p>
         </li>
