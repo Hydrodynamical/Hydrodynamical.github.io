@@ -91,8 +91,9 @@
 
     <h1>Research</h1>
         <p>My research focuses on mathematical structures arising from both classical and quantum statistical physics. 
-        These structures arise from fundamental questions in physics, primarily asking how to
-        can approximate high or infinite dimensional systems of equations by lower dimensional effective non-linear equations. 
+        These structures emerge out of fundamental questions in physics, primarily asking how to
+        can approximate high or infinite dimensional systems by effective non-linear equations of low dimension.</p>
+        <p> 
         I plan to continue studying these types of problems in mathematical physics, and additionally investigate how to
         apply these methods to problems in large neural networks. This approach to studying machine learning has
         the potential to utilize the high dimensionality of these networks and understand how they converge at the
@@ -103,31 +104,124 @@
 
 
     <h1>Bibliography</h1>
+    <p>This is a searchable list of papers I find interesting. It is currently in construction.</p>
     <input type="text" id="searchInput" placeholder="Search...">
     
     <ul id="searchList">
+
+        <li>R. Adami, F. Golse, A. Teta. <span class = "italic">Rigorous Derivation of the Cubic NLS in Dimension One.</span> Journal of Statistical Physics, 127(6):1193-1220, 2007. <a href="javascript:void(0);" onclick="toggleAbstract('AGT07')">Abstract</a>.
+            <div id="AGT07" class="abstract">
+                We derive rigorously the one-dimensional cubic nonlinear Schrödinger equation from a many-body quantum dynamics. The interaction potential is rescaled through a weak-coupling limit together with a short-range one. We start from a factorized initial state, and prove propagation of chaos with the usual two-step procedure: in the former step, convergence of the solution of the BBGKY hierarchy associated to the many-body quantum system to a solution of the BBGKY hierarchy obtained from the cubic NLS by factorization is proven; in the latter, we show the uniqueness for the solution of the infinite BBGKY hierarchy.
+            </div>
+        </li>
+        <li>R. Agarwal, F. Tcherimmissine. <span class = "italic">Computation of Hypersonic Shock Wave Flows of Diatomic Gases and Gas Mixtures using the Generalized Boltzmann Equation.</span> In 48th AIAA Aerospace Sciences Meeting, 2012. <a href="javascript:void(0);" onclick="toggleAbstract('AT12')">Abstract</a>.
+            <div id="AT12" class="abstract">
+                Hypersonic flows about space vehicles produce flow fields in thermodynamic non-equilibrium with local Knudsen numbers Kn =&lambda;/L (where &lambda; is the mean free path of gas molecules and L is a characteristic length) which may lie in all the three regimes-continuum, transition and rarefied. Flows in continuum regime can be modeled accurately by the Navier-Stokes (NS) equations; however the flows in transition and rarefied regimes require a kinetic approach such as the Direct  Simulation Monte Carlo (DSMC) method or the solution of the Boltzmann equation. This paper describes the development of a computational methodology and a code for computing hypersonic non-equilibrium  shockwave flows of diatomic gases using the Generalized Boltzmann Equation (GBE) at Knudsen numbers  in  transitional  and  rarefied  flow  regimes. The GBE solver  has  been validated by computing the 1D shock structure in nitrogen for Rotational-Translational (R-T) relaxations and  comparing  the  numerical  results  with  the  experimental  data  for  Mach  numbers  up  to 15.  The  solver  has  been  exercised  successfully  for  computing  the  2D  blunt  body  flowsin nitrogenand 3D flow from a rectangular jet of nitrogen in vacuum for R-T relaxations. The issuesof  stability  of  the  algorithm  and  the  possibility  of  reducing  the  number  of  rotational levels  in  the  computations  without  compromising  the  accuracy  of  the  solutions  have  been rigorously  addressed.A  new  two-level kinetic  model  has  been  developed  for  computing  the RT  relaxations  in  a  diatomic  gas  and  has  been  validated  by  comparing  the  results  with  the solutions of complete GBE. The model is about twenty times more efficient than the GBE in computing the shock structure. It should be noted that the model is different than the BGK model;  it  accounts  for  both  elastic  and  inelastic  collisions.  The computational  methodology has  been  extendedto  compute  the  hypersonic  shock  structure  in  diatomic  gases  including both  the  RT  and  Vibrational-Translational  (V-T)  relaxations. 1-D  shock  structure  in nitrogen has been computed including both R-T and V-T relaxations and has been validated by comparing the results with the experimental data. A computational methodology has also been developed to compute the hypersonic shock structure in a non-reactive mixture of two diatomic gases. 1-D shock structure has been computed in an inert mixture of nitrogen and oxygen for R-T relaxations. To accomplish this, the GBE is formulated and solved in “impulse space” instead of velocity space. 
+            </div>
+        </li>
+        <li>R. Alexander. <span class = "italic">Time Evolution for Infinitely Many Hard Spheres.</span> Communications in Mathematical Physics, Vol. 49, pages 217-232, 1976. <a href="javascript:void(0);" onclick="toggleAbstract('Ale76')">Abstract</a>.
+            <div id="Ale76" class="abstract">
+                We construct the time evolution for infinitely many particles in R^v interacting by the hard-sphere potential. Because there are abundant examples of hard-sphere configurations with more than one solution to the Newtonian equations of motion, we introduce the concept of a regular solution, in which the growth of velocities and crowding of particles at infinity are limited. We prove that (1) regular solutions exist with probability one in every equilibrium state, and (2) any configuration of the infinite system is the initial point of at most one regular solution. Equilibrium states are invariant under the time-evolution.
+            </div>
+        </li>
+        <li>Z. Ammari, F. Nier. <span class = "italic">Mean Field Propagation of Wigner Measures and BBGKY Hierarchies for General Bosonic States.</span> Journal de Math&eacute;matiques Pures et Appliqu&eacute;es. 95(6): 585-626, 2011. <a href="javascript:void(0);" onclick="toggleAbstract('AN11')">Abstract</a>. 
+            <div id="AN11" class="abstract">
+                Contrary to the finite dimensional case, Weyl and Wick quantizations are no more asymptotically equivalent in the infinite dimensional bosonic second quantization. Moreover neither the Weyl calculus defined for cylindrical symbols nor the Wick calculus defined for polynomials are preserved by the action of a nonlinear flow. Nevertheless taking advantage carefully of the information brought by these two calculuses in the mean field asymptotics, the propagation of Wigner measures for general states can be proved, extending to the infinite dimensional case a standard result of semiclassical analysis.
+            </div>
+        </li>
+        <li>A. Athanassoulis, T. Paul, F. Pezzotti, M. Pulvirenti. <span class = "italic">Semiclassical Propagation of Coherent States for the Hartree Equation.</span> Annales Henri Poincar&eacute;, 12(8): 1613-1634, 2011. <a href="javascript:void(0);" onclick="toggleAbstract('APPP11')">Abstract</a>. 
+            <div id="APPP11" class="abstract">
+                In this paper we consider the nonlinear Hartree equation in presence of a given external potential, for an initial coherent state. Under suitable smoothness assumptions, we approximate the solution in terms of a time dependent coherent state, whose phase and amplitude can be determined by a classical flow. The error can be estimated in $L^2$ by $C \sqrt {\var}$, $\var$ being the Planck constant. Finally we present a full formal asymptotic expansion.
+            </div>
+        </li>
+        <li>G. Bai, U. Koley, S. Mishra, R. Molinaro. <span class = "italic">Physics Informed Neural Networks (PINNs) for Approximating Nonlinear Dispersive PDEs.</span> arXiv.org, 2022. <a href="javascript:void(0);" onclick="toggleAbstract('BKMM22')">Abstract</a>. 
+            <div id="BKMM22" class="abstract">
+                We propose a novel algorithm, based on physics-informed neural networks (PINNs) to efficiently approximate solutions of nonlinear dispersive PDEs such as the KdV-Kawahara, Camassa-Holm and Benjamin-Ono equations. The stability of solutions of these dispersive PDEs is leveraged to prove rigorous bounds on the resulting error. We present several numerical experiments to demonstrate that PINNs can approximate solutions of these dispersive PDEs very accurately.
+            </div>
+        </li>
+        <li>C. Bardos, F. Golse, A. D. Gottlieb, N. J. Mauser. <span class = "italic">Mean Field Dynamics of Fermions and the Time-Dependent Hartree-Fock Equation.</span> Journal de Math&eacute;matiques Pures et Appliqu&eacute;es, 82(6): 665-683, 2003. <a href="javascript:void(0);" onclick="toggleAbstract('BGGM03')">Abstract</a>. 
+            <div id="BGGM03" class="abstract">
+                The time-dependent Hartree-Fock equations are derived from the N-particle Schrödinger equation with mean-field scaling in the infinite particle limit, for initial data that are like Slater determinants. Only the case of bounded interaction potentials is treated in this work. We prove that, in the infnite particle limit, the first partial trace of the N-particle density operator approaches the solution of the time-dependent Hartree-Fock equations in the trace norm.
+            </div>
+        </li>
+        <li>J. Bedrossian, N. Masmoudi, C. Mouhot. <span class = "italic">Landau Damping: Paraproducts and Gevrey Regularity.</span> Annals of PDE, 2(4), 2016. <a href="javascript:void(0);" onclick="toggleAbstract('BMM16')">Abstract</a>. 
+            <div id="BMM16" class="abstract">
+                We give a new, simpler, proof of nonlinear Landau damping on T^d in Gevrey-1/s regularity (s > 1/3) which matches the regularity requirement predicted by the formal analysis of Mouhot and Villani in the original proof of Landau damping [Acta Mathematica 2011]. Our proof combines in a novel way ideas from the original proof of Landau damping and the proof of inviscid damping in 2D Euler [arXiv:1306.5028]. As in the work on 2D Euler, we use paraproduct decompositions and controlled regularity loss to replace the Newton iteration scheme employed in the original proof. We perform time-response estimates adapted from the original proof to control the plasma echoes and couple them to energy estimates on the distribution function in the style of the work on 2D Euler.
+            </div>
+        </li>
+        <li>N. Benedikter, V. Jak&scaron;i&cacute;, M. Porta, C. Saffirio, B. Schlein. <span class = "italic">Mean-Field Evolution of Fermionic Mixed States.</span> Communications on Pure and Applied Mathematics, 69(12):2250-2303, 2016. <a href="javascript:void(0);" onclick="toggleAbstract('BJPSS16')">Abstract</a>. 
+            <div id="BJPSS16" class="abstract">
+                In this paper we study the dynamics of fermionic mixed states in the mean-field regime. We consider initial states that are close to quasi-free states and prove that, under suitable assumptions on the initial data and on the many-body interaction, the quantum evolution of such initial data is well approximated by a suitable quasi-free state. In particular, we prove that the evolution of the reduced one-particle density matrix converges, as the number of particles goes to infinity, to the solution of the time-dependent Hartree-Fock equation. Our result holds for all times and gives effective estimates on the rate of convergence of the many-body dynamics towards the Hartree-Fock evolution.
+            </div>
+        </li>
+        <li>N. Benedikter, M. Porta, C. Saffirio, B. Schlein. <span class = "italic">From the Hartree Dynamics to the Vlasov Equation.</span> Archive for Rational Mechanics and Analysis, 221(1): 272-334, 2016. <a href="javascript:void(0);" onclick="toggleAbstract('BPSS16')">Abstract</a>. 
+            <div id="BPSS16" class="abstract">
+                We consider the evolution of quasi-free states describing N fermions in the mean field limit, as governed by the nonlinear Hartree equation. In the limit of large N, we study the convergence towards the classical Vlasov equation. For a class of regular interaction potentials, we establish precise bounds on the rate of convergence.
+            </div>
+        </li>
+        <li>N. Benedikter, M. Porta, B. Schlein. <span class = "italic">Mean-Field Dynamics of Fermions with Relativistic Dispersion.</span> Journal of Mathematical Physics, 55(2), 2014. <a href="javascript:void(0);" onclick="toggleAbstract('BPS14')">Abstract</a>. 
+            <div id="BPS14" class="abstract">
+                We extend the derivation of the time-dependent Hartree-Fock equation recently obtained in [2] to fermions with a relativistic dispersion law. The main new ingredient is the propagation of semiclassical commutator bounds along the pseudo-relativistic Hartree-Fock evolution.
+            </div>
+        </li>
+        <li>J. Berner, P. Grohs, G. Kutynick, P. Peterson. <span class = "italic">The Modern Mathematics of Deep Learning.</span> Cambridge University Press, pages 1-111, 2022. <a href="javascript:void(0);" onclick="toggleAbstract('BGKP22')">Abstract</a>. 
+            <div id="BGKP22" class="abstract">
+                We describe the new field of mathematical analysis of deep learning. This field emerged around a list of research questions that were not answered within the classical framework of learning theory. These questions concern: the outstanding generalization power of overparametrized neural networks, the role of depth in deep architectures, the apparent absence of the curse of dimensionality, the surprisingly successful optimization performance despite the non-convexity of the problem, understanding what features are learned, why deep architectures perform exceptionally well in physical problems, and which fine aspects of an architecture affect the behavior of a learning task in which way. We present an overview of modern approaches that yield partial answers to these questions. For selected approaches, we describe the main ideas in more detail.
+            </div>
+        </li>
+        <li>C. Bianca, C. Dogbe. <span class = "italic">On the Boltzmann Gas Mixture Equation: Linking the Kinetic and Fluid Regimes.</span> Communications in Nonlinear Science and Numerical Simulation, 29:240-256, 2015. <a href="javascript:void(0);" onclick="toggleAbstract('BD15')">Abstract</a>. 
+            <div id="BD15" class="abstract">
+                This paper aims at developing a new connection between the Boltzmann equation and the Navier-Stokes equation. Specifically the paper deals with the derivation of the macroscopic equations from asymptotic limits of the Boltzmann equation for a binary gas mixture of hard-sphere gases. By extending the methodology of the single-component gases case and by employing different time and space scalings, we show that it is possible to recover, under suitable technical assumptions, various fluid dynamics equations like the incompressible linearized and nonlinear Navier–Stokes equations, the incompressible linearized and nonlinear Euler equations. The novelty of this paper is the method that we propose, which differs from the Hilbert and Chapman–Enskog expansions. Future research directions are also discussed in the last section of the paper with special attention at the different scalings that can be employed in order to obtain equations presenting a ghost effect.
+            </div>
+        </li>
+        <li>A.B. Bobylev, I. M. Gamba. <span class = "italic">Boltzmann Equations for Mixtures of Maxwell Gases: Exact Solutions and Power Like Tails. </span> Journal of Statistical Physics, 124: 497-516, 2006. <a href="javascript:void(0);" onclick="toggleAbstract('BG06')">Abstract</a>. 
+            <div id="BG06" class="abstract">
+                We consider the Boltzmann equations for mixtures of Maxwell gases. It is shown that in certain limiting case the equations admit self-similar solutions that can be constructed in explicit form. More precisely, the solutions have simple explicit integral representations. The most interesting solutions have finite energy and power like tails. This shows that power like tails can appear not just for granular particles (Maxwell models are far from reality in this case), but also in the system of particles interacting in accordance with laws of classical mechanics. In addition, non-existence of positive self-similar solutions with finite moments of any order is proven for a wide class of Maxwell models.
+            </div>
+        </li>
+        <li>L. Boltzmann. <span class = "italic">Weitere Studien &uuml;ber das W&auml;rmengleichgewicht unter Gasmolek&uuml;len</span>. Sitzungsberichte Akad. Wiss., Vienna (II), 66:275-370, 1872. <a href="javascript:void(0);" onclick="toggleAbstract('Bol72')">Abstract</a>. 
+            <div id="Bol72" class="abstract">
+                Nach der mechanischen Wärmetheorie gehorchen die thermischen Eigenschaften von Gasen und anderen Stoffen trotz der Tatsache, daß diese Stoffe aus einer großen Anzahl von Molekülen zusammengesetzt sind, die sich in schneller ungleichmäßiger Bewegung befinden, wohlbestimmten Gesetzen. Die Erklärung dieser Eigenschaften muß auf die Wahrscheinlichkeitsrechnung gegründet werden, und dazu muß man die Verteilungsfunktion kennen, die zu jedem Zeitpunkt die Anzahl von Molekülen in jedem Zustand bestimmt. Um diese Verteilungsfunktion f(x,t) = Anzahl der Moleküle, die zur Zeit t die Energie x haben, zu ermitteln, wird für f eine partielle Differentialgleichung hergeleitet, indem untersucht wird, wie sich f während eines kleinen Zeitintervalls infolge von Stößen zwischen den Molekülen ändert.
+                <br>
+                <br>
+                According to the mechanical theory of heat, the thermal properties of gases and other substances obey well-determined laws, despite the fact that these substances are composed of a large number of molecules in rapid, uneven motion. The explanation of these properties must be based on probability theory, and for this one must know the distribution function that determines the number of molecules in each state at any given time. In order to determine this distribution function f(x,t) = number of molecules that have energy x at time t, a partial differential equation is derived for f by examining how f changes during a small time interval as a result of collisions between the molecules changes.
+            </div>
+        </li>
+        <li>W. Braun, K. Hepp. <span class = "italic">The Vlasov Dynamics and its Fluctuations in the 1/N Limit of Interacting Classical Particles.</span> 56(2):101-113, 1977. <a href="javascript:void(0);" onclick="toggleAbstract('BH77')">Abstract</a>. 
+            <div id="BH77" class="abstract">
+                For classical N-particle systems with pair interaction ... the Vlasov dynamics is shown to be the w*-limit as $N \rightarrow \infty$. Propagation of molecular chaos holds in this limit, and the fluctuations of intensive observables converge to a Gaussian stochastic process.
+            </div>
+        </li>
+        <li>M. Briant, E. Daus. <span class = "italic">The Boltzmann Equation for a Multi-species Mixture Close to Global Equilibrium.</span> Archive for Rational Mechanics and Analaysis, 222: 1367-1443, 2016. <a href="javascript:void(0);" onclick="toggleAbstract('BD16')">Abstract</a>. 
+            <div id="BD16" class="abstract">
+                We study the Cauchy theory for a multi-species mixture, where the different species can have different masses, in a perturbative setting on the three dimensional torus. The ultimate aim of this work is to obtain the existence, uniqueness and exponential trend to equilibrium of solutions to the multi-species Boltzmann equation in , where 
+                is a polynomial weight. We prove the existence of a spectral gap for the linear multi-species Boltzmann operator allowing different masses, and then we establish a semigroup property thanks to a new explicit coercive estimate for the Boltzmann operator. Then we develop an 
+                theory à la Guo for the linear perturbed equation. Finally, we combine the latter results with a decomposition of the multi-species Boltzmann equation in order to deal with the full equation. We emphasize that dealing with different masses induces a loss of symmetry in the Boltzmann operator which prevents the direct adaptation of standard mono-species methods (for example Carleman representation, Povzner inequality). Of important note is the fact that all methods used and developed in this work are constructive. Moreover, they do not require any Sobolev regularity and the 
+                framework is dealt with for any, recovering the optimal physical threshold of finite energy 
+                in the particular case of a multi-species hard spheres mixture with the same masses.
+            </div>
+        </li>
+        <li>J. Bruna, B. Perstorfer, E. Vanden-Eijnden. <span class = "italic">Neural Galerkin Scheme with Active Learning for High-Dimensional Evolution Equations.</span> arXiv.org, 2022. <a href="javascript:void(0);" onclick="toggleAbstract('BPV22')">Abstract</a>. 
+            <div id="BPV22" class="abstract">
+                Deep neural networks have been shown to provide accurate function approximations in high dimensions. However, fitting network parameters requires training data that may not be available beforehand, which is particularly challenging in science and engineering applications where often it is even unclear how to collect new informative training data in the first place. This work proposes Neural Galerkin schemes based on deep learning that generate training data samples with active learning for numerically solving high-dimensional partial differential equations. Neural Galerkin schemes train networks by minimizing the residual sequentially over time, which enables adaptively collecting new training data in a self-informed manner that is guided by the dynamics described by the partial differential equations, which is in stark contrast to many other machine learning methods that aim to fit network parameters globally in time without taking into account training data acquisition. Our finding is that the active form of gathering training data of the proposed Neural Galerkin schemes is key for numerically realizing the expressive power of networks in high dimensions. Numerical experiments demonstrate that Neural Galerkin schemes have the potential to enable simulating phenomena and processes with many variables for which traditional and other deep-learning-based solvers fail, especially when features of the solutions evolve locally such as in high-dimensional wave propagation problems and interacting particle systems described by Fokker-Planck and kinetic equations.
+            </div>
+        </li>
+
+
+
+
+
         <!-- ADD REFERENCES HERE --> 
         <!-- BASE OBJECT
 
-        <li>Authors. <span class = "italic">Title</span> <a href="javascript:void(0);" onclick="toggleAbstract('id')">Abstract</a>. <a href="link">ArXiv Link</a>.
+        <li>Authors. <span class = "italic">Title</span> <a href="javascript:void(0);" onclick="toggleAbstract('id')">Abstract</a>. 
             <div id="id" class="abstract">
                 Abstract contents.
             </div>
         </li>
         
         -->
-        <li>Paper Title. <a href="javascript:void(0);" onclick="toggleAbstract('id')">Abstract</a>
-            <p id="id" class="abstract">This is the abstract of the paper.</p>
-        </li>
-        <li>Paper Title 1. <a href="javascript:void(0);" onclick="toggleAbstract('id1')">Abstract</a>
-            <p id="id1" class="abstract">This is the abstract of the paper alpha.</p>
-        </li>
-        <li>Paper Title 2. <a href="javascript:void(0);" onclick="toggleAbstract('id2')">Abstract</a>
-            <p id="id2" class="abstract">This is the abstract of the paper beta .</p>
-        </li>
-        <li>Paper Title 3. <a href="javascript:void(0);" onclick="toggleAbstract('id3')">Abstract</a>
-            <p id="id3" class="abstract">This is the abstract of the paper gamma.</p>
-        </li>
+
     </ul>
     
 
