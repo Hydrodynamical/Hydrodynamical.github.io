@@ -3,23 +3,29 @@
 <head>
     <title>Joseph K. Miller</title>
     <style>
-        .form-group {
-            margin-bottom: 10px;
-        }
+.form-group {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 10px;
+}
 
-        label, input, textarea {
-            display: inline-block;
-        }
+label {
+    width: 300px; /* Width of your labels */
+    text-align: right;
+    margin-right: 10px;
+}
 
-        label {
-            width: 300px; /* Adjust the width as needed */
-            text-align: right;
-            margin-right: 10px;
-        }
+input[type="text"], textarea {
+    width: 400px; /* Width of your text inputs */
+    /* other styles... */
+}
 
-        input[type="text"], textarea {
-            width: 400px; /* Adjust the width as needed */
-        }
+/* Style for the button group */
+.button-group {
+    display: flex; /* Use flexbox for the buttons */
+    gap: 10px; /* Spacing between buttons */
+}
+
     </style>
 </head>
 <body>
@@ -49,8 +55,10 @@
             <label for="abstractContents">Abstract:</label>
             <textarea id="abstractContents" name="abstractContents"></textarea>
         </div>
-
-        <input type="button" value="Submit" onclick="processInputs()">
+        <div class="button-group">
+            <input type="button" value="Search Google" onclick="searchGoogle()">
+            <input type="button" value="Generate HTML" onclick="processInputs()">
+        </div>
     </form>
     <pre id="output"></pre>
 
