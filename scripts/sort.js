@@ -1,5 +1,5 @@
 function sortListOldToNew(listName, delimiterChar) {
-    console.log("sortListByYear function is called");
+    // console.log("sortListByYear function is called");
     var list = document.getElementById(listName);
     var items = list.getElementsByTagName('li');
     var itemsArr = [];
@@ -12,18 +12,18 @@ function sortListOldToNew(listName, delimiterChar) {
         var aYear = a.textContent.split(delimiterChar)[0].slice(-4);
         var bYear = b.textContent.split(delimiterChar)[0].slice(-4);
         // console.log("a:", a, "b:", b)
-        console.log("aYear:", aYear, "bYear:", bYear);
+        // console.log("aYear:", aYear, "bYear:", bYear);
         return aYear - bYear
     });
 
     for (var i = 0; i < itemsArr.length; i++) {
         list.appendChild(itemsArr[i]);
     }
-    console.log(itemsArr)
+    //console.log(itemsArr)
 }
 
 function sortListNewToOld(listName, delimiterChar) {
-    console.log("sortListByYear function is called");
+    // console.log("sortListByYear function is called");
     var list = document.getElementById(listName);
     var items = list.getElementsByTagName('li');
     var itemsArr = [];
@@ -36,12 +36,12 @@ function sortListNewToOld(listName, delimiterChar) {
         var aYear = a.textContent.split(delimiterChar)[0].slice(-4);
         var bYear = b.textContent.split(delimiterChar)[0].slice(-4);
         // console.log("a:", a, "b:", b)
-        console.log("aYear:", aYear, "bYear:", bYear);
+        // console.log("aYear:", aYear, "bYear:", bYear);
         return - aYear + bYear
     });
 
     for (var i = 0; i < itemsArr.length; i++) {
         list.appendChild(itemsArr[i]);
     }
-    console.log(itemsArr)
+    // console.log(itemsArr)
 }
