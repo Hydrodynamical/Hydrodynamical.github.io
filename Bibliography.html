@@ -90,8 +90,12 @@
 
     <h1>Bibliography</h1>
     <p>This is a searchable list of papers that are directly related to my research. It is still in <a href="tools/BibliographyTool.html">construction</a>.</p>
+    
     <input type="text" id="searchInput" placeholder="Search...">
     
+    <p><button onclick="sortListOldToNew('searchList', delimiterChar = '. Abstract')">Sort by Oldest</button> <button onclick="sortListNewToOld('searchList', delimiterChar = '. Abstract')">Sort by Newest</button>
+    </p>
+
     <ul id="searchList">
 
         <li>R. Adami, F. Golse, A. Teta. <span class = "italic">Rigorous Derivation of the Cubic NLS in Dimension One.</span> Journal of Statistical Physics, 127(6):1193-1220, 2007. <a href="javascript:void(0);" onclick="toggleAbstract('AGT07')">Abstract</a>.
@@ -270,13 +274,13 @@
             </div>
         </li>
 
-        <li>R. Dobru&scaron;in. <span class = "italic">Vlasov Equations.</span> Funktsional. Anal. i Prilozhen, 13(2):48-58, 1979.<a href="javascript:void(0);" onclick="toggleAbstract('Dob79')">Abstract</a>. 
+        <li>R. Dobru&scaron;in. <span class = "italic">Vlasov Equations.</span> Funktsional. Anal. i Prilozhen, 13(2):48-58, 1979. <a href="javascript:void(0);" onclick="toggleAbstract('Dob79')">Abstract</a>. 
             <div id="Dob79" class="abstract">
                 In Russian.
             </div>
         </li>
 
-        <li>M. Duda, X. Chen, A. Schindewolf, R. Bause, J. von Milczewski, R. Schmidt, I. Bloch, X. Luo. <span class = "italic">Transition from a Polaronic Condensate to a Degenerate Fermi Gas of Heteronuclear Molecules.</span> Nature Physics, 19(5):720-725, 2023.<a href="javascript:void(0);" onclick="toggleAbstract('DCSBMSBL23')">Abstract</a>. 
+        <li>M. Duda, X. Chen, A. Schindewolf, R. Bause, J. von Milczewski, R. Schmidt, I. Bloch, X. Luo. <span class = "italic">Transition from a Polaronic Condensate to a Degenerate Fermi Gas of Heteronuclear Molecules.</span> Nature Physics, 19(5):720-725, 2023. <a href="javascript:void(0);" onclick="toggleAbstract('DCSBMSBL23')">Abstract</a>. 
             <div id="DCSBMSBL23" class="abstract">
                 The interplay of quantum statistics and interactions in atomic Bose-Fermi mixtures leads to a phase diagram markedly different from pure fermionic or bosonic systems. However, investigating this phase diagram remains challenging when bosons condense due to the resulting fast interspecies loss. Here we report observations consistent with a phase transition from a polaronic to a molecular phase in a density-matched degenerate Bose-Fermi mixture. The condensate fraction, representing the order parameter of the transition, is depleted by interactions, and the build-up of strong correlations results in the emergence of a molecular Fermi gas. The features of the underlying quantum phase transition represent a new phenomenon complementary to the paradigmatic Bose-Einstein condensate/Bardeen-Cooper-Schrieffer crossover observed in Fermi systems. By driving the system through the transition, we produce a sample of sodium-potassium molecules exhibiting a large molecule-frame dipole moment in the quantum-degenerate regime.
             </div>
@@ -463,7 +467,7 @@
             </div>
         </li>
 
-        
+
 
 
 
@@ -506,5 +510,6 @@
             }
         }
     </script>
+    <script src="scripts/sort.js"></script>
 </body>
 </html>
