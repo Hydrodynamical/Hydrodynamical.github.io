@@ -318,13 +318,13 @@
 
         <li>L. Erdős, B. Schlein, H. T. Yau. <span class = "italic">Rigorous Derivation of the Gross-Pitaevskii Equation with a Large Interaction Potential</span>. Journal of the American Mathematical Society, 22(4):1099-1156, 2009. <a href="javascript:void(0);" onclick="toggleAbstract('ESY09')">Abstract</a>. 
             <div id="ESY09" class="abstract">
-                Consider a system of $N$ bosons in three dimensions interacting via a repulsive short range pair potential $N^2 V(N(x_i- x_j))$, where $\bm{x}=(x_1, ..., x_N)$ denotes the positions of the particles. Let $H_N$ denote the Hamiltonian of the system and let $\psi_{N,t}$ be the solution to the Schrödinger equation. Suppose that the initial data $\psi_{N,0}$ satisfies the energy condition $\langle \psi_{N,0},H_N \psi_{N,0} \rangle \leq CN$ and that the one-particle density matrix converges to a projection as $N \rightarrow \infty$. Then, we prove that the k-particle density matrices of $\psi_{N,t}$ factorize in the limit $N \rightarrow \infty$. Moreover, the one particle orbital wave function solves the time-dependent Gross-Pitaevskii equation, a cubic non-linear Schrödinger equation with the coupling constant proportional to the scattering length of the potential $V$. In \cite{ESY}, we proved the same statement under the condition that the interaction potential $V$ is sufficiently small; in the present work we develop a new approach that requires no restriction on the size of the potential.
+                Consider a system of $N$ bosons in three dimensions interacting via a repulsive short range pair potential $N^2 V(N(x_i- x_j))$, where $x=(x_1, ..., x_N)$ denotes the positions of the particles. Let $H_N$ denote the Hamiltonian of the system and let $\psi_{N,t}$ be the solution to the Schrödinger equation. Suppose that the initial data $\psi_{N,0}$ satisfies the energy condition $\langle \psi_{N,0},H_N \psi_{N,0} \rangle \leq CN$ and that the one-particle density matrix converges to a projection as $N \rightarrow \infty$. Then, we prove that the k-particle density matrices of $\psi_{N,t}$ factorize in the limit $N \rightarrow \infty$. Moreover, the one particle orbital wave function solves the time-dependent Gross-Pitaevskii equation, a cubic non-linear Schrödinger equation with the coupling constant proportional to the scattering length of the potential $V$. In \cite{ESY}, we proved the same statement under the condition that the interaction potential $V$ is sufficiently small; in the present work we develop a new approach that requires no restriction on the size of the potential.
             </div>
         </li>
 
         <li>L. Erdős, B. Schlein, H. T. Yau. <span class = "italic">Derivation of the Gross-Pitaevskii Equation for the Dynamics of Bose-Einstein Condensate</span>. Annals of Mathematics, 172(1):291-370, 2010. <a href="javascript:void(0);" onclick="toggleAbstract('ESY10')">Abstract</a>. 
             <div id="ESY10" class="abstract">
-                Consider a system of N bosons in three dimensions interacting via a repulsive short range pair potential $N^2 V(N(x_i - x_j))$, where $\bm{x}=(x_1, ..., x_N)$ denotes the positions of the particles. Let $H_N$ denote the Hamiltonian of the system and let $\psi_{N,t}$ be the solution to the Schrödinger equation. Suppose that the initial data 𝜓𝑁,0
+                Consider a system of N bosons in three dimensions interacting via a repulsive short range pair potential $N^2 V(N(x_i - x_j))$, where $x=(x_1, ..., x_N)$ denotes the positions of the particles. Let $H_N$ denote the Hamiltonian of the system and let $\psi_{N,t}$ be the solution to the Schrödinger equation. Suppose that the initial data 𝜓𝑁,0
  satisfies the energy condition $\langle \psi_{N,0},H_N^k \psi_{N,0}\rangle \leq C^k N^k$ for $k = 1,2, ...$. We also assume that the $k$-particle density matrices of the initial state are asymptotically factorized as $N \rightarrow \infty$. We prove that the $k$-particle density matrices of $\psi_{N,t}$ are also asymptotically factorized and the one particle orbital wave function solves the Gross-Pitaevskii equation, a cubic nonlinear Schrödinger equation with the coupling constant given by the scattering length of the potential $V$. We also prove the same conclusion if the energy condition holds only for $k=1$ but the factorization of $\psi_{N,0}$ is assumed in a stronger sense.
             </div>
         </li>
@@ -511,5 +511,15 @@
         }
     </script>
     <script src="scripts/sort.js"></script>
+
+    <!-- MATHJAX CODE HERE -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]}
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </body>
 </html>
