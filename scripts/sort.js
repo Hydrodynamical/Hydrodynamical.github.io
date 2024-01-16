@@ -37,10 +37,10 @@ function sortListNewToOld(listName, delimiterChar) {
         var bYear = b.textContent.split(delimiterChar)[0].slice(-4);
         // console.log("a:", a, "b:", b)
         // console.log("aYear:", aYear, "bYear:", bYear);
-        return - aYear + bYear
+        return  aYear - bYear
     });
 
-    for (var i = 0; i < itemsArr.length; i++) {
+    for (var i = itemsArr.length - 1; i >= 0; i--) {
         list.appendChild(itemsArr[i]);
     }
     // console.log(itemsArr)
