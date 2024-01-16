@@ -28,7 +28,7 @@ function sortListNewToOld(listName, delimiterChar) {
     var items = list.getElementsByTagName('li');
     var itemsArr = [];
 
-    for (var i = 0; i < items.length; i++) {
+    for (var i = items.length - 1; i >= 0; i--) {
         itemsArr.push(items[i]);
     }
 
