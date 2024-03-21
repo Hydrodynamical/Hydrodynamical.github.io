@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang = "en">
+<html>
+    <head>
+        
+        <title>Joseph K. Miller</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                color: #1A2622;
+                background-color: #F2F2F2;
+                font-size: 1rem; /* Base font size */
+            }
+            .navbar {
+                background-color: #2D402C;
+                overflow: hidden;
+                /* Use flexbox for a flexible layout */
+                display: flex;
+                justify-content: space-around;
+            }
+            .navbar a {
+                float: left;
+                display: block;
+                color: #647345;
+                text-align: center;
+                padding: 14px 20px;
+                text-decoration: none;
+                 /* Responsive font size */
+                font-size: 1em;
+            }
+            .navbar a:hover {
+                background-color: #647345;
+            }
+            .navbar a:link, .navbar a:visited, .navbar a:active {
+            color: #F2F2F2; /* Ensures navbar link color doesn't change */
+            }
+            a:link {
+            color: #2D402C; /* Unvisited link color */
+            }
+            a:visited {
+                color: #647345; /* Visited link color */
+            }
+            a:hover {
+                color: #A6A6A6; /* Link on hover color */
+            }
+            a:active {
+                color: #8DA656; /* Active link color */
+            }
+            /* list styles */
+            ul {
+            list-style-type: square;
+            padding-left: 30px;
+            }
+            ul li {
+            margin-bottom: 10px; /* Adjusts vertical space between list items */
+            }
+            ul li::before {
+                color: #1A2622;
+                display: inline-block;
+                width: 1em;
+                margin-left: -1em;
+            }
+            .italic {
+            font-style: italic;
+            }
+            .bold {
+            font-weight: bold;
+            }
+            .abstract {
+            display: none;
+            margin-top: 10px;
+            border: 2px solid #647345; /* Change the border color and width */
+            padding: 15px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+            border-radius: 5px; /* Optional: rounded corners */
+            background-color: #F2F2F2; /* Light background for the box */
+            }
+
+        </style>
+    </head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="CurriculumVitae.html">Curriculum Vitae</a>
+        <a href="Publications.html">Publications</a>
+        <a href="Teaching.html">Teaching</a>
+    </div>
+
+    <h1>Mean Field Games</h1>
+    <p>This page is dedicated to interesting papers in mean field games and some things on Markov Decision Processes (MDP). <a href="tools/BibliographyTool.html">Bibliography Tool</a></p>
+    
+    <input type="text" id="searchInput" placeholder="Search...">
+    
+    <p><button onclick="sortListOldToNew('searchList', delimiterChar = '. Abstract')">Sort by Oldest</button> <button onclick="sortListNewToOld('searchList', delimiterChar = '. Abstract')">Sort by Newest</button>
+    </p>
+
+    <ul id="searchList">
+
+        <li>R. Carmona, M. Laurière, Z. Tan. <span class = "italic">Model-Free Mean-Field Reinforcement Learning: Mean-Field MDP and Mean-Field Q-Learning</span>. Ann. Appl. Probab. 33 (6B) 5334 - 5381, 2023. <a href="javascript:void(0);" onclick="toggleAbstract('CLT23')">Abstract</a>.
+            <div id="CLT23" class="abstract">
+                We study infinite horizon discounted mean field control (MFC) problems with common noise through the lens of mean field Markov decision processes (MFMDP). We allow the agents to use actions that are randomized not only at the individual level but also at the level of the population. This common randomization is introduced for the purpose of exploration from a reinforcement learning (RL) paradigm. It also allows us to establish connections between both closed-loop and open-loop policies for MFC and Markov policies for the MFMDP. In particular, we show that there exists an optimal closed-loop policy for the original MFC and we prove dynamic programming principles for the state and state-action value functions. Building on this framework and the notion of state-action value function, we then propose RL methods for such problems, by adapting existing tabular and deep RL methods to the mean-field setting. The main difficulty is the treatment of the population state, which is an input of the policy and the value function. We provide convergence guarantees for the tabular Q-learning algorithm based on discretizations of the simplex. We also show that neural network based deep RL algorithms are more suitable for continuous spaces as they allow us to avoid discretizing the mean field state space. Numerical examples are provided.
+            </div>
+        </li>
+
+        <li>M. Kearns, Y. Mansour, A. Y. Ng. <span class = "italic">A Sparse Sampling Algorithm for Near-Optimal Planning in Large Markov Decision Processes</span>. Machine Learning, 49, 193–208, 2002. <a href="javascript:void(0);" onclick="toggleAbstract('KMN02')">Abstract</a>.
+            <div id="KMN02" class="abstract">
+                A critical issue for the application of Markov decision processes (MDPs) to realistic problems is how the complexity of planning scales with the size of the MDP. In stochastic environments with very large or infinite state spaces, traditional planning and reinforcement learning algorithms may be inapplicable, since their running time typically grows linearly with the state space size in the worst case. In this paper we present a new algorithm that, given only a generative model (a natural and common type of simulator) for an arbitrary MDP, performs on-line, near-optimal planning with a per-state running time that has no dependence on the number of states. The running time is exponential in the horizon time (which depends only on the discount factor γ and the desired degree of approximation to the optimal policy). Our algorithm thus provides a different complexity trade-off than classical algorithms such as value iteration—rather than scaling linearly in both horizon time and state space size, our running time trades an exponential dependence on the former in exchange for no dependence on the latter.
+        
+        Our algorithm is based on the idea of sparse sampling. We prove that a randomly sampled look-ahead tree that covers only a vanishing fraction of the full look-ahead tree nevertheless suffices to compute near-optimal actions from any state of an MDP. Practical implementations of the algorithm are discussed, and we draw ties to our related recent results on finding a near-best strategy from a given class of strategies in very large partially observable MDPs (Kearns, Mansour, & Ng. Neural information processing systems 13, to appear).
+            </div>
+        </li>
+
+        <li>L. Kocsis, C. Szepesvári . <span class = "italic"> Bandit Based Monte-Carlo Planning</span>. In: Machine Learning: ECML 2006. Lecture Notes in Computer Science(), vol 4212. Springer, Berlin, Heidelberg., 2006. <a href="javascript:void(0);" onclick="toggleAbstract('KS06')">Abstract</a>.
+            <div id="KS06" class="abstract">
+                For large state-space Markovian Decision Problems Monte-Carlo planning is one of the few viable approaches to find near-optimal solutions. In this paper we introduce a new algorithm, UCT, that applies bandit ideas to guide Monte-Carlo planning. In finite-horizon or discounted MDPs the algorithm is shown to be consistent and finite sample bounds are derived on the estimation error due to sampling. Experimental results show that in several domains, UCT is significantly more efficient than its alternatives.
+            </div>
+        </li>
+
+        <!-- ADD REFERENCES HERE --> 
+        <!-- BASE OBJECT
+
+        <li>Authors. <span class = "italic">Title</span>. Journal Info, Year. <a href="javascript:void(0);" onclick="toggleAbstract('id')">Abstract</a>. 
+            <div id="id" class="abstract">
+                Abstract contents.
+            </div>
+        </li>
+        
+        -->
+
+    </ul>
+    
+
+    <!-- Scripts -->
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function() {
+            var input = this.value.toLowerCase();
+            var listItems = document.getElementById('searchList').getElementsByTagName('li');
+    
+            for (var i = 0; i < listItems.length; i++) {
+                var item = listItems[i].textContent || listItems[i].innerText;
+                if (item.toLowerCase().indexOf(input) > -1) {
+                    listItems[i].style.display = "";
+                } else {
+                    listItems[i].style.display = "none";
+                }
+            }
+        });
+        function toggleAbstract(id) {
+            var abstract = document.getElementById(id);
+            if (abstract.style.display === 'none') {
+                abstract.style.display = 'block';
+            } else {
+                abstract.style.display = 'none';
+            }
+        }
+    </script>
+    <script src="scripts/sort.js"></script>
+
+    <!-- MATHJAX CODE HERE -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]}
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</body>
+</html>
