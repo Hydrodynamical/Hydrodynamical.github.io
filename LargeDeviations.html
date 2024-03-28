@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang = "en">
+<html>
+    <head>
+        
+        <title>Joseph K. Miller</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                color: #1A2622;
+                background-color: #F2F2F2;
+                font-size: 1rem; /* Base font size */
+            }
+            .navbar {
+                background-color: #2D402C;
+                overflow: hidden;
+                /* Use flexbox for a flexible layout */
+                display: flex;
+                justify-content: space-around;
+            }
+            .navbar a {
+                float: left;
+                display: block;
+                color: #647345;
+                text-align: center;
+                padding: 14px 20px;
+                text-decoration: none;
+                 /* Responsive font size */
+                font-size: 1em;
+            }
+            .navbar a:hover {
+                background-color: #647345;
+            }
+            .navbar a:link, .navbar a:visited, .navbar a:active {
+            color: #F2F2F2; /* Ensures navbar link color doesn't change */
+            }
+            a:link {
+            color: #2D402C; /* Unvisited link color */
+            }
+            a:visited {
+                color: #647345; /* Visited link color */
+            }
+            a:hover {
+                color: #A6A6A6; /* Link on hover color */
+            }
+            a:active {
+                color: #8DA656; /* Active link color */
+            }
+            /* list styles */
+            ul {
+            list-style-type: square;
+            padding-left: 30px;
+            }
+            ul li {
+            margin-bottom: 10px; /* Adjusts vertical space between list items */
+            }
+            ul li::before {
+                color: #1A2622;
+                display: inline-block;
+                width: 1em;
+                margin-left: -1em;
+            }
+            .italic {
+            font-style: italic;
+            }
+            .bold {
+            font-weight: bold;
+            }
+            .abstract {
+            display: none;
+            margin-top: 10px;
+            border: 2px solid #647345; /* Change the border color and width */
+            padding: 15px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+            border-radius: 5px; /* Optional: rounded corners */
+            background-color: #F2F2F2; /* Light background for the box */
+            }
+
+        </style>
+    </head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="CurriculumVitae.html">Curriculum Vitae</a>
+        <a href="Publications.html">Publications</a>
+        <a href="Teaching.html">Teaching</a>
+    </div>
+
+    <h1>Large Deviations</h1>
+    <p>This page is dedicated to interesting papers in on Large Deviation Theory (LDT). <a href="tools/BibliographyTool.html">Bibliography Tool</a></p>
+    
+    <input type="text" id="searchInput" placeholder="Search...">
+    
+    <p><button onclick="sortListOldToNew('searchList', delimiterChar = '. Abstract')">Sort by Oldest</button> <button onclick="sortListNewToOld('searchList', delimiterChar = '. Abstract')">Sort by Newest</button>
+    </p>
+
+    <ul id="searchList">
+
+        <li>S. Whitelam, D. Jacobson, I. Tamblyn. <span class = "italic">Evolutionary reinforcement learning of dynamical large deviations</span>. J. Chem. Phys. 153, 044113, 2020. <a href="javascript:void(0);" onclick="toggleAbstract('WJT20')">Abstract</a>.
+            <div id="WJT20" class="abstract">
+                We show how to bound and calculate the likelihood of dynamical large deviations using evolutionary reinforcement learning. An agent, a stochastic model, propagates a continuous-time Monte Carlo trajectory and receives a reward conditioned upon the values of certain path-extensive quantities. Evolution produces progressively fitter agents, potentially allowing the calculation of a piece of a large-deviation rate function for a particular model and path-extensive quantity. For models with small state spaces, the evolutionary process acts directly on rates, and for models with large state spaces, the process acts on the weights of a neural network that parameterizes the model’s rates. This approach shows how path-extensive physics problems can be considered within a framework widely used in machine learning.
+            </div>
+        </li>
+        
+        <!-- ADD REFERENCES HERE --> 
+        <!-- BASE OBJECT
+
+        <li>Authors. <span class = "italic">Title</span>. Journal Info, Year. <a href="javascript:void(0);" onclick="toggleAbstract('id')">Abstract</a>. 
+            <div id="id" class="abstract">
+                Abstract contents.
+            </div>
+        </li>
+        
+        -->
+
+    </ul>
+    
+
+    <!-- Scripts -->
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function() {
+            var input = this.value.toLowerCase();
+            var listItems = document.getElementById('searchList').getElementsByTagName('li');
+    
+            for (var i = 0; i < listItems.length; i++) {
+                var item = listItems[i].textContent || listItems[i].innerText;
+                if (item.toLowerCase().indexOf(input) > -1) {
+                    listItems[i].style.display = "";
+                } else {
+                    listItems[i].style.display = "none";
+                }
+            }
+        });
+        function toggleAbstract(id) {
+            var abstract = document.getElementById(id);
+            if (abstract.style.display === 'none') {
+                abstract.style.display = 'block';
+            } else {
+                abstract.style.display = 'none';
+            }
+        }
+    </script>
+    <script src="scripts/sort.js"></script>
+
+    <!-- MATHJAX CODE HERE -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]}
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</body>
+</html>
