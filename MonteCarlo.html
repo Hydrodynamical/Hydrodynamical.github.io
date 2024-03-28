@@ -88,8 +88,8 @@
         <a href="Teaching.html">Teaching</a>
     </div>
 
-    <h1>Mean Field Games</h1>
-    <p>This page is dedicated to interesting papers in mean field games and some things on Markov Decision Processes (MDP). <a href="tools/BibliographyTool.html">Bibliography Tool</a></p>
+    <h1>Monte Carlo Papers</h1>
+    <p>This page is dedicated to interesting papers in mean field games, Monte Carlo methods, and some things on Markov Decision Processes (MDP). <a href="tools/BibliographyTool.html">Bibliography Tool</a></p>
     
     <input type="text" id="searchInput" placeholder="Search...">
     
@@ -97,6 +97,12 @@
     </p>
 
     <ul id="searchList">
+
+        <li>G. Bianconi. <span class = "italic">Statistical physics of exchangeable sparse simple networks, multiplex networks and simplicial complexes</span>. Phys. Rev. E 105, 034310 , 2022. <a href="javascript:void(0);" onclick="toggleAbstract('Bia22')">Abstract</a>.
+            <div id="Bia22" class="abstract">
+                Exchangeability is a desired statistical property of network ensembles requiring their invariance upon relabelling of the nodes. However combining sparsity of network ensembles with exchangeability is challenging. Here we propose a statistical physics framework and a Metropolis-Hastings algorithm defining exchangeable sparse network ensembles. The model generates networks with heterogeneous degree distributions by enforcing only global constraints while existing (non exchangeable) exponential random graphs enforce an extensive number of local constraints. This very general theoretical framework to describe exchangeable networks is here first formulated for uncorrelated simple networks and then it is extended to treat simple networks with degree correlations, directed networks, bipartite networks and generalized network structures including multiplex networks and simplicial complexes. In particular here we formulate and treat both uncorrelated and correlated exchangeable ensembles of simplicial complexes using statistical mechanics approaches.
+            </div>
+        </li>
 
         <li>R. Carmona, M. Laurière, Z. Tan. <span class = "italic">Model-Free Mean-Field Reinforcement Learning: Mean-Field MDP and Mean-Field Q-Learning</span>. Ann. Appl. Probab. 33 (6B) 5334 - 5381, 2023. <a href="javascript:void(0);" onclick="toggleAbstract('CLT23')">Abstract</a>.
             <div id="CLT23" class="abstract">
@@ -117,6 +123,8 @@
                 For large state-space Markovian Decision Problems Monte-Carlo planning is one of the few viable approaches to find near-optimal solutions. In this paper we introduce a new algorithm, UCT, that applies bandit ideas to guide Monte-Carlo planning. In finite-horizon or discounted MDPs the algorithm is shown to be consistent and finite sample bounds are derived on the estimation error due to sampling. Experimental results show that in several domains, UCT is significantly more efficient than its alternatives.
             </div>
         </li>
+
+
 
         <!-- ADD REFERENCES HERE --> 
         <!-- BASE OBJECT
