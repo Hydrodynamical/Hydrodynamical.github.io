@@ -26,7 +26,7 @@
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
-             /* Responsive font size */
+                /* Responsive font size */
             font-size: 1em;
         }
         .navbar a:hover {
@@ -47,25 +47,34 @@
         a:active {
             color: #8DA656; /* Active link color */
         }
-        .centered-image {
-        display: block; /* Allows margin auto to work */
-        margin-left: auto;
-        margin-right: auto;
-        width: 200px; /* Fixed width */
-        height: 150px; /* Fixed height */
-        object-fit: cover; /* This ensures the image covers the fixed size without stretching. It might crop the image if the aspect ratio is different */
+        /* list styles */
+        ul {
+        list-style-type: square;
+        padding-left: 30px;
         }
-        .left-aligned-image {
-            float: left; /* Aligns the image to the left */
-            margin-right: 10px; /* Adds some space between the image and any following content */
-            /* Optional: specify a fixed size */
-            width: 200px; /* Example width */
-            height: auto; /* Height auto will maintain the aspect ratio */
+        ul li {
+        margin-bottom: 10px; /* Adjusts vertical space between list items */
         }
-        .standard-image {
-            /* Optional: specify a fixed size */
-            width: 400px; /* Example width */
-            height: auto; /* Height auto will maintain the aspect ratio */
+        ul li::before {
+            color: #1A2622;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .italic {
+        font-style: italic;
+        }
+        .bold {
+        font-weight: bold;
+        }
+        .abstract {
+        display: none;
+        margin-top: 10px;
+        border: 2px solid #647345; /* Change the border color and width */
+        padding: 15px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+        border-radius: 5px; /* Optional: rounded corners */
+        background-color: #F2F2F2; /* Light background for the box */
         }
 
     </style>
@@ -81,13 +90,87 @@
 
 
     <h1>Teaching</h1>
-    <h2>UT Austin: Summer, 2024</h2>
-    <h3><a href="M365C.html">Real Analysis M365C: Prelim Bootcamp</a></h3>
-    <p>June 24th - July 19th</p>
+    <p>This page lists my teaching record.</p>
+    <p>Double click "Info" below to display more information about the class.</p>
 
-    <h2>UT Austin: Spring, 2022</h2>
-    <h3>M361K - Introduction to Real Analysis</h3>
-    <p>I was a TA for this class with Dr. Mark Daniels. <a href="files/teaching_feedback__s22_.pdf">Teaching Feedback</a> </p>
+    
+    <input type="text" id="searchInput" placeholder="Search...">
+    
+    <ul id="searchList">
+        <!-- BASE OBJECT FOR COPY PASTE
+
+        <li><span class = "bold">Math 171 - Fundamental Concepts of Analysis.</span> Stanford University, Autumn. <a href="javascript:void(0);" onclick="toggleAbstract('Math171')">Info</a>
+            <div id="Math171" class="abstract">
+                <a href="files/Math171_Syllabus.pdf">Math171 - Syllabus</a>
+                <p>Recommended for Mathematics majors and required of honors Mathematics majors. A more advanced and general version of Math 115, introducing and using metric spaces. Properties of Riemann integrals, continuous functions and convergence in metric spaces; compact metric spaces, basic point set topology.</p>
+            </div>
+        </li>
+        
+        -->
+        <h2>2024</h2>
+        <li><span class = "bold">Math 171 - Fundamental Concepts of Analysis.</span> Stanford University, Autumn. <a href="javascript:void(0);" onclick="toggleAbstract('Math171')">Info</a>
+            <div id="Math171" class="abstract">
+                <a href="files/Math171_Syllabus.pdf">Math171 - Syllabus</a>
+                <p>I was the principal instructor for this 40 person class.</p>
+                <p>Recommended for Mathematics majors and required of honors Mathematics majors. A more advanced and general version of Math 115, introducing and using metric spaces. Properties of Riemann integrals, continuous functions and convergence in metric spaces; compact metric spaces, basic point set topology.</p>
+            </div>
+        </li>
+        <li><span class = "bold">Math 381C - Graduate Real Analysis Bootcamp.</span> University of Texas - Austin, Summer. <a href="javascript:void(0);" onclick="toggleAbstract('Math365C2024')">Info</a>
+            <div id="Math365C2024" class="abstract">
+                <a href="M365C.html">Course Webpage</a>
+                <p>I was the principal instructor for this summer bootcamp. </p>
+            <ul>
+                <li>Measure Theory and Integration</li>
+                Basic properties of Lebesgue measure and the Lebesgue integral, general measure and integration theory in an abstract measure space, Lp spaces; convergence almost everywhere, in norm and measure; approximation in Lp-norm and Lp-Lq duality; integration in product spaces and convolution; and the concept of a Banach space, Hilbert space, dual space and the Riesz representation theorem.
+                <br>
+                <br>
+
+                <li>Differentiation</li>
+                The relationship between differentiation and the Lebesgue integral on a real interval, derivatives of measures, absolutely continuous functions and absolute continuity between measures, functions of bounded variation.
+                <br>
+                <br>
+
+                <li>Specific Important Theorems</li>
+                Monotone and Dominated Convergence theorems, Fatou's lemma, Egorov's theorem, Lusin's theorem, Radon-Nikodym theorem, Fubini-Tonelli theorems about product measures and integration on product spaces, Fundamental Theorem of Calculus for Lebesgue Integrals, Minkowski's Inequality, Holder's Inequality, Jensen's Inequality, and Bessel's Inequality.
+            </ul>
+            </div>
+        </li>
+
+        <h2>2022</h2>
+
+        <li><span class = "bold">Math 361K - Introduction to Real Analysis.</span> University of Texas - Austin, Spring. <a href="javascript:void(0);" onclick="toggleAbstract('Math361K')">Info</a>
+            <div id="Math361K" class="abstract">
+                I was TA for this class with Prof. Mark Daniels. I received the Frank Gerth III Teaching Excellence Award for my work in this class.
+                <p>A rigorous treatment of the real number system, of real sequences, and of limits, continuity, derivatives, and integrals of real-valued functions of one real variable.</p>
+            </div>
+        </li>
+    </ul>
+    
+    <!-- Scripts -->
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function() {
+            var input = this.value.toLowerCase();
+            var listItems = document.getElementById('searchList').getElementsByTagName('li');
+    
+            for (var i = 0; i < listItems.length; i++) {
+                var item = listItems[i].textContent || listItems[i].innerText;
+                if (item.toLowerCase().indexOf(input) > -1) {
+                    listItems[i].style.display = "";
+                } else {
+                    listItems[i].style.display = "none";
+                }
+            }
+        });
+        function toggleAbstract(id) {
+            var abstract = document.getElementById(id);
+            if (abstract.style.display === 'none') {
+                abstract.style.display = 'block';
+            } else {
+                abstract.style.display = 'none';
+            }
+        }
+    </script>
+    
 
 </body>
 </html>
