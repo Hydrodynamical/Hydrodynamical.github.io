@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Essays — Joseph K. Miller</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #1A2622;
+            background-color: #F2F2F2;
+            font-size: 1rem;
+        }
+        .navbar {
+            background-color: #2D402C;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-around;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #647345;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 1em;
+        }
+        .navbar a:hover {
+            background-color: #647345;
+        }
+        .navbar a:link, .navbar a:visited, .navbar a:active {
+            color: #F2F2F2;
+        }
+        a:link {
+            color: #2D402C;
+        }
+        a:visited {
+            color: #647345;
+        }
+        a:hover {
+            color: #A6A6A6;
+        }
+        a:active {
+            color: #8DA656;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 30px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        .italic {
+            font-style: italic;
+        }
+        .summary-toggle {
+            border: 0;
+            padding: 0;
+            background: none;
+            color: #2D402C;
+            font: inherit;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .summary-toggle:hover {
+            color: #A6A6A6;
+        }
+        .summary-toggle:focus-visible {
+            outline: 2px solid #647345;
+            outline-offset: 3px;
+        }
+        .abstract {
+            margin-top: 10px;
+            border: 2px solid #647345;
+            padding: 15px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            background-color: #F2F2F2;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="CurriculumVitae.html">Curriculum Vitae</a>
+        <a href="Publications.html">Publications</a>
+        <a href="Teaching.html">Teaching</a>
+    </nav>
+
+    <main>
+        <h1>Essays</h1>
+        <p>Click "Summary" below to display a short description.</p>
+        <input type="text" id="searchInput" placeholder="Search..." aria-label="Search essays">
+        <ul id="searchList">
+            <li><span class="italic">Research in Mathematics after AI.</span> (<time datetime="2026-10-11">October 11, 2026</time>). <button type="button" class="summary-toggle" aria-expanded="false" aria-controls="math-ai-summary">Summary</button>. <a href="research-in-mathematics-after-ai.html">Essay Link</a>.
+                <div id="math-ai-summary" class="abstract" hidden>
+                    On mathematical understanding, the craft of research, and what we continue cultivating as AI becomes capable of producing proofs.
+                </div>
+            </li>
+        </ul>
+        <p id="noResults" role="status" hidden>No essays match your search.</p>
+    </main>
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function () {
+            var query = this.value.toLowerCase();
+            var entries = document.querySelectorAll('#searchList > li');
+            var visibleCount = 0;
+            entries.forEach(function (entry) {
+                entry.hidden = !entry.textContent.toLowerCase().includes(query);
+                if (!entry.hidden) visibleCount++;
+            });
+            document.getElementById('noResults').hidden = visibleCount > 0;
+        });
+        document.querySelectorAll('.summary-toggle').forEach(function (button) {
+            button.addEventListener('click', function () {
+                var summary = document.getElementById(button.getAttribute('aria-controls'));
+                summary.hidden = !summary.hidden;
+                button.setAttribute('aria-expanded', String(!summary.hidden));
+            });
+        });
+    </script>
+</body>
+</html>
