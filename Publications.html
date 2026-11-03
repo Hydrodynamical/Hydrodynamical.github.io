@@ -105,6 +105,12 @@
         </li>
 
         -->
+        <li id="pde-learning">J. K. Miller. <span class="italic">Can Language Models Learn a PDE? A Benchmark for Scientific Reasoning through Experimental Design.</span> Preprint (2026). <a href="javascript:void(0);" onclick="toggleAbstract('M26PDELearning')">Abstract</a>. <a href="files/PDE_Learning.pdf">PDF</a>. <a href="https://github.com/Hydrodynamical/PDE_Learning">Code</a>.
+            <div id="M26PDELearning" class="abstract">
+                We study how language models choose and use measurements when identifying an unknown differential equation. In this benchmark, a model selects weak-form test functions under a query budget and uses numerical tools to fit and check the hidden coefficients. The interaction records measurement choices, verification, error reduction, and confidence alongside final accuracy. We analyze 180 scored runs from six models on 30 shared tasks. On medium tasks, Gemini 3.1 Pro and Claude Opus 4.6 both achieve 9/10 success, but their mean consistency-check counts are 2.3 and 7.6. Equal aggregate success thus coexists with different patterns of tool use. Numerical controls provide a reference: a fixed sine design solves all 30 reconstructed tasks and succeeds on 92%, 91%, and 98% of 100 fresh tasks in each of three settings at the minimum query budget. The resulting records support a study of experimental behavior, while the benefit of adaptive measurement selection remains an open question. We release the environment, analysis, and numerical controls.
+            </div>
+        </li>
+
         <li>J. K. Miller, B. Su. <span class="italic">Optimal Graphon Control of Collective Dynamics.</span> (2026). <a href="javascript:void(0);" onclick="toggleAbstract('MS26Graphon')">Abstract</a>. <a href="https://arxiv.org/abs/2610.31975">ArXiv Link</a>.
             <div id="MS26Graphon" class="abstract">
                 We study optimal control of non-linear graphon dynamics in which the interaction kernel itself is the control. Motivated by opinion formation in social networks, we ask how changing who influences whom can steer a population toward a desired outcome. We develop a framework using interaction kernels with bounded variation in the receiver label, providing compactness while accommodating finite networks.
